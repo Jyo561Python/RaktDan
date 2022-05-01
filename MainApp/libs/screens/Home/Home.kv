@@ -1,0 +1,172 @@
+<HospitalsScreen@MDScreen>
+    md_bg_color:BG_COLOR_LIGHT
+    ScrollView:
+        MDBoxLayout:
+            adaptive_height:True
+            padding:0, dp(30), 0, dp(150)
+            pos_hint:{"center_y":.5}
+            orientation:"vertical"
+            spacing:"20dp"
+            MDBoxLayout:
+                adaptive_height:True
+                pos_hint: {'top': 1}
+                orientation:"vertical"
+                Image:
+                    source: "assets/blood-donation-small.png"
+                    size_hint_y:None
+                    height:dp(50)
+                    pos_hint:{"top":1}
+                MDLabel:
+                    text:"Nearby Hospitals"
+                    pos_hint:{"top":1}
+                    size_hint_y:None
+                    font_size:"25sp"
+                    height:self.font_size + dp(40)
+                    theme_text_color:"Custom"
+                    text_color:DARK_TEXT_COLOR
+                    halign:"center"
+                    font_name:"Montserrat-Bold"
+            HospitalCard:
+                source: "assets/apollo-hospital.webp"
+                hospital_name: "Apollo Hospital"
+            HospitalCard:
+                source: "assets/AMRI.jpeg"
+                hospital_name: "AMRI Hospital"
+            HospitalCard:
+                source: "assets/AIIMS.jpeg"
+                hospital_name: "AIIMS Hospital"
+
+<AccountScreen@MDScreen>
+    md_bg_color:BG_COLOR_LIGHT
+    MDBoxLayout:
+        orientation:"vertical"
+        padding:dp(20)
+        spacing:dp(20)
+        adaptive_height:True
+        pos_hint:{"center_y":.5}
+        FitImage:
+            source:"assets/demo-user.png"
+            size_hint:None,None
+            size:dp(150),dp(150)
+            pos_hint:{"center_x":.5}
+            radius:dp(75),dp(75),dp(75),dp(75)
+        MDBoxLayout:
+            adaptive_height:True
+            size_hint_x:1
+            pos_hint:{"center_x":.5}
+            MDLabel:
+                text: app.user_name
+                font_size:"25sp"
+                font_name:"Montserrat-Bold"
+                halign:"center"
+                size_hint_y:None
+                height: dp(50)
+            Image:
+                source:"assets/badge1.jpeg"
+                size_hint:None,None
+                size:dp(20),dp(20)
+                pos_hint:{"center_y":.5}
+            Image:
+                source:"assets/badge2.jpeg"
+                size_hint:None,None
+                size:dp(20),dp(20)
+                pos_hint:{"center_y":.5}
+        MDBoxLayout:
+            padding:0,0,0,0
+            spacing:dp(30)
+            size_hint_y:None
+            height:image.height
+            MDSeparator:
+                pos_hint:{"center_y":.4}
+                color:[0,0,0,.6]
+            Image:
+                id: image
+                source:"assets/blood-donation-small.png"
+                size_hint:None, None
+                width: dp(50)
+            MDSeparator:
+                pos_hint:{"center_y":.4}
+                color:[0,0,0,.6] 
+        GradientIconButton:
+            pos_hint:{"center_x":.5}
+            size_hint_x:1
+            icon:"account"
+            text:"Account"
+        GradientIconButton:
+            pos_hint:{"center_x":.5}
+            size_hint_x:1
+            icon:"cog"
+            text:"Settings"
+        GradientIconButton:
+            pos_hint:{"center_x":.5}
+            size_hint_x:1
+            icon:"logout"
+            text:"Log out"
+
+<DetailsScreen@MDScreen>
+    md_bg_color: BG_COLOR_LIGHT
+    name: 'details'
+    MDBoxLayout:
+        id: box
+        orientation: 'vertical'
+        adaptive_height: True
+        padding: dp(30), dp(10), dp(30), dp(10)
+        pos_hint:{'center_x': .5, 'top': 1}
+        spacing: dp(15)
+        MDBoxLayout:
+            adaptive_height: True
+            MDLabel:
+                text:"Details"
+                size_hint_y:None
+                height:self.font_size + dp(30)
+                font_size: FONT_SIZE
+                halign:"left"
+            MDIconButton:
+                icon:"menu"
+                
+        HospitalList:
+            text:"Donation at Apollo Hospital"
+            time_remaining:"Done"
+        HospitalList:
+            text:"Immediate requirement of O -ve blood at AIIMS"
+            time_remaining:"Skipped"
+        HospitalList:
+            text:"Blood donation camp at AMRI"
+            time_remaining:"Attended"
+        # HospitalList:
+        #     text:"Capital Hospital"
+        #     time_remaining:"2Hrs 9mins"
+        GradientButton:
+            pos_hint: {'center_x': 0.5}
+            text:"Update"
+            size_hint_x:1
+            font_size: FONT_SIZE - dp(2)
+            radius:dp(10)
+            on_release:
+                app.send_notif()
+
+<Home>
+    MDBottomNavigation:
+        id: bottom_nav
+        MDBottomNavigationItem:
+            name: 'details'
+            text: 'Details'
+            icon: 'book' if self.header.active else "book-outline"
+            DetailsScreen:
+                id: details
+        MDBottomNavigationItem:
+            name: 'home'
+            text: 'Home'
+            icon: 'home' if self.header.active else "home-outline"
+            HospitalsScreen:
+
+        MDBottomNavigationItem:
+            name: 'Account'
+            text: 'Account'
+            icon: 'account' if self.header.active else "account-outline"
+            AccountScreen:
+
+
+
+
+

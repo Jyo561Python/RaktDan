@@ -1,0 +1,115 @@
+#: import get_color_from_hex kivy.utils.get_color_from_hex
+#: set GRADIENT_LIGHT get_color_from_hex("a92323")
+#: set GRADIENT_DARK get_color_from_hex("861d1d")
+#: set YELLOW get_color_from_hex("EAED71")
+#: set GREEN get_color_from_hex("B6D953")
+#: set LIGHT_ACCENT_COLOR get_color_from_hex("FDE0E0")
+#: set BG_COLOR_LIGHT get_color_from_hex("FDF7F7")
+#: set DARK_TEXT_COLOR get_color_from_hex("461616")
+#: set BUTTON_TEXT_COLOR get_color_from_hex("892727")
+#: set FONT_SIZE sp(20)
+#: set RADIUS sp(15)
+#: set PADDING dp(15)
+#: import Gradient kivy_gradient.Gradient
+#: import AKOnboarding libs.modules.onboarding.AKOnboarding
+#: import AKOnboardingItem libs.modules.onboarding.AKOnboardingItem
+#: import CardTextField libs.modules.CardTextField.CardTextField
+
+<RoundButton@MDFillRoundFlatButton>
+    font_name:"Montserrat-Bold"
+    font_size: FONT_SIZE
+    _radius: dp(15)
+
+<GradientButton@MDFillRoundFlatButton>
+    _radius: RADIUS
+    gradient_light: GRADIENT_LIGHT
+    gradient_dark: GRADIENT_DARK
+    font_name:"Montserrat-Bold"
+    font_size: FONT_SIZE
+    text_color: [.99,.99,.99,1]
+
+<HeadingLabel@MDLabel>
+    halign:"center"
+    size_hint_y: None
+    font_name:"Montserrat-Bold"
+    font_size:"30sp"
+
+<ChatDialogLeft@MDCard>
+    size_hint_y: None
+    size_hint_x: .6
+    height: "120dp"
+    radius: dp(60) , dp(60), dp(60), dp(0)
+    elevation: 30
+    padding: "30dp"
+    text:""
+    left:True
+    canvas:
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: self.radius
+            texture: Gradient.horizontal(GREEN, YELLOW) if not root.left else Gradient.horizontal(YELLOW, GREEN)
+            
+    MDLabel:
+        text: root.text
+        font_name:"RobotoMedium"
+        halign:"center"
+
+<ChatDialogRight@ChatDialogLeft>
+    left: False
+    radius: dp(60), dp(60), dp(0) , dp(60)
+
+<TextLabel@MDLabel>
+    size_hint_x:.8
+    text: root.text
+    font_name:"RobotoMedium"
+    halign:"center"
+    font_size:"18sp"
+    theme_text_color:"Custom"
+    text_color: GREEN
+
+<GradientIconButton@MDFillRoundFlatIconButton>
+    _radius: RADIUS
+    icon:root.icon
+    gradient_light: GRADIENT_LIGHT
+    gradient_dark: GRADIENT_DARK
+    font_name:"Montserrat-Bold"
+    font_size: FONT_SIZE
+    text_color: [.99,.99,.99,1]
+
+<HospitalCard@MDCard>:
+    orientation: 'vertical'
+    md_bg_color: LIGHT_ACCENT_COLOR
+    pos_hint: {'center_x': 0.5,'center_y': 0.5}
+    padding: 0,0,0,dp(20)
+    size_hint: .8, None
+    elevation:15
+    radius: "10dp"
+    height: dp(350)
+    spacing:"20dp"
+    hospital_name: ""
+    source:""
+    FitImage:
+        source: root.source 
+        radius: root.radius[0], root.radius[1],0,0
+    MDLabel:
+        size_hint_y:None
+        font_size:"20sp"
+        height:self.font_size
+        font_name: "Montserrat-Bold"
+        halign:"center"
+        text: "Demo Hospital" if not root.hospital_name else root.hospital_name
+    MDRaisedButton:
+        text: "[b]View"
+        pos_hint: {'center_x': 0.5,'center_y': 0.5}
+        size_hint: .8, None
+        elevation:10
+        radius: dp(10)
+
+<HospitalList@TwoLineListItem>
+    height:dp(70)
+    time_remaining:"10hrs"
+    md_bg_color:[0,0,0,1]
+    theme_text_color:"Custom"
+    text_color: DARK_TEXT_COLOR
+    secondary_text: self.time_remaining

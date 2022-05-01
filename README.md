@@ -3,7 +3,7 @@
 # RaktDan
   An application to serve as a medium of network between blood donors and patients & hospitals. The app aims to simplify the process of blood donation by introducing a 	digital approach to the tradition model.
 
-<p align="center"><a hreaf="https://youtu.be/5-oYyPHZjAY">View The Presentation</a></p>
+					[View The Presentation](https://youtu.be/5-oYyPHZjAY)
 
 
 ## Inspiration

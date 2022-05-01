@@ -10,7 +10,7 @@
 	
 ## App Visuals
 
-   <video src="./MainApp/assets/20220501_141006.gif" height="300px" width="100px" >
+   <video src="./MainApp/assets/20220501_141006.gif" height="300px" width="100px" />
 
 ## 💻 What it does
  - Users can use the apps Update feature to stay updated about requirements of blood donation Area

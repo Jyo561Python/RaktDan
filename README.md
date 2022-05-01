@@ -1,14 +1,19 @@
 # RaktDan
-An application to serve as a medium of network between blood donors and patients & hospitals. The app aims to simplify the process of blood donation by introducing a digital approach to the tradition model.
+	An application to serve as a medium of network between blood donors and patients & hospitals. The app aims to simplify the process of blood donation by introducing a 	digital approach to the tradition model.
+
+
+## Inspiration
+
+	Our
+
+
 
 ## App Implementation Guide?
  * This app provides a platform to sign up as a potential blood donor or hospital authority.
  * A Voluntary Donor has to make an account on our app with some general information like:
-    - Name
-    - Age
+    - Name(via Google Cloud)
     - Blood Group
-    - Address
-    - Gender
+    - Aadhar ID
     - Location [Manually].
 
 
@@ -45,9 +50,41 @@ Raise a pull request to issues for minor bug fixes or for a feature you are work
 <h2 align="center"><b>Contributors 🫂</b></h2>
 
 <p align="center">
-<a href="https://github.com/Jyo561Python/RaktDan/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Jyo561Python/RaktDan" />
-</a>
+<table>
+
+ <tr>
+    <td align="center">
+        <img src="./MainApp/assets/IMG_20220501_140535.jpg" width="100px;" height="100px" alt=""/>
+        <br /><sub><b>Ashutosh Mahapatra</b></sub><br />
+      <a href="https://github.com/AM-ash-OR-AM-I"><img src='https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white'></a>
+      <a href="https://www.linkedin.com/in/ashutosh-mahapatra-bb0476233/"><img src='https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white'></a>
+      </td>
+</tr>
+<tr>
+    <td align="center">
+        <img src="./MainApp/assets/IMG_20220501_140603.jpg" width="100px;" height="100px" alt=""/>
+        <br /><sub><b>Rohit Patel</b></sub><br />
+      <a href="https://github.com/P4RZ1V4L-93"><img src='https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white'></a>
+      <a href="https://www.linkedin.com/in/rohit4505/"><img src='https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white'></a>
+      </td>
+</tr>
+  <tr>
+    <td align="center">
+        <img src="./MainApp/assets/IMG_20220501_140550.jpg" width="100px;" height="100px" alt=""/>
+        <br /><sub><b>Pragati Saikia</b></sub><br />
+      <a href="https://github.com/Pragatii08"><img src='https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white'></a>
+      <a href="https://www.linkedin.com/in/pragati-saikia-2003/"><img src='https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white'></a>
+      </td>
+</tr>
+ <tr>
+    <td align="center">
+        <img src="./MainApp/assets/IMG_20220501_142918.jpg" width="100px;" height="100px" alt=""/>
+        <br /><sub><b>Jyotiraditya Kuanar</b></sub><br />
+      <a href="https://github.com/Jyo561Python"><img src='https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white'></a>
+      <a href="https://www.linkedin.com/in/jyotiraditya-kuanar-8b39b7207"><img src='https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white'></a>
+      </td>
+</tr>
+</table>
 
 <br>
 

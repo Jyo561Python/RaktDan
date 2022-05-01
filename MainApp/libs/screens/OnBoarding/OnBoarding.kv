@@ -1,0 +1,107 @@
+<OnBoarding1@AKOnboardingItem>:
+    name: "OnBoarding1"
+    FloatLayout:
+        FitImage:
+            source: "assets/gradient.png"
+        AsyncImage:
+            id: afro
+            source: "assets/afro-girl.png"
+            size_hint_x: .35
+            allow_stretch: False
+            pos_hint: {'center_y': 0.7}
+        ChatDialogLeft:
+            id: chat_bubble_1
+            text: "Isn't this a difficulty to find blood availabilty during an emergency?"
+            right: afro.x + afro.width + self.width - dp(25)
+            center_y: afro.center_y + afro.width * afro.image_ratio + dp(15)
+
+        AsyncImage:
+            id: handicapped
+            source: "assets/handicapped-woman.png"
+            size_hint_x:.5
+            pos_hint:{"right":1.05, 'center_y': 0.24}
+
+        ChatDialogRight:
+            id: chat_bubble_2
+            text: "Each one of us has the power to help the society to prevent shortage of blood supply."
+            right: handicapped.x + dp(50)
+            center_y: handicapped.center_y + handicapped.width * handicapped.image_ratio / 2 +dp(35)
+                    
+
+
+<OnBoarding2@AKOnboardingItem>:
+    name: "OnBoarding2"
+    FloatLayout:
+        FitImage:
+            source: "assets/gradient.png"
+        AsyncImage:
+            id: woman
+            source: "assets/woman-sitting-on-stool.png"
+            size_hint_x: .4
+            allow_stretch: False
+            pos_hint: {'center_y': 0.7}
+        ChatDialogLeft:
+            id: chat_bubble_3
+            left: True
+            text: "Would you like to be kept informed about nearby blood banks and hospitals?"
+            right: woman.x + woman.width + self.width - dp(25)
+            center_y: woman.center_y + woman.width * woman.image_ratio - dp(30)
+
+        AsyncImage:
+            id: handicapped
+            source: "assets/black-man.png"
+            size_hint_x:.5
+            pos_hint:{"right":1.05, 'center_y': 0.24}
+
+        ChatDialogRight:
+            id: chat_bubble_4
+            text: "Would you like to volunteer yourself to save a life who's in need of blood?"
+            right: handicapped.x + dp(70)
+            center_y: handicapped.center_y + handicapped.width * handicapped.image_ratio / 2 +dp(30)
+                    
+
+<OnBoarding3@AKOnboardingItem>
+    name: "OnBoarding3"
+    FloatLayout:
+        FitImage:
+            source: "assets/gradient.png"
+        AsyncImage:
+            id: healthy_woman
+            source:"assets/healthy-woman.png"
+            pos_hint:{"center_y":.55}
+        TextLabel:    
+            text: "You will be alerted if someone is in need of blood in your nearby hospitals."
+            pos_hint:{"center_y":.85,"center_x":.5}
+        TextLabel:    
+            id: text_label
+            text:"The app alerts are accompanied by blood group required along with the hospital name. You can volunteer yourself by accepting the request and you'll be further notified by the officials."
+            pos_hint:{"center_x":.5}
+            center_y: healthy_woman.center_y - dp(250)
+        RoundButton:
+            text:"[b]REGISTER"
+            font_size: FONT_SIZE
+            gradient_light: GREEN
+            size_hint_x: .9
+            md_bg_color: GREEN
+            text_color: BUTTON_TEXT_COLOR
+            pos_hint: {"center_y":.08,'center_x': 0.5}
+            on_release:
+                app.root.set_current("SignUp")
+                app.change_statusbar()
+
+<OnBoarding>
+    name: "OnBoarding"
+    AKOnboarding:
+        id: OnBoarding
+        bottom_bar_color: GRADIENT_DARK
+        circles_color: GREEN
+        circles_size: dp(18)
+        on_finish: 
+            app.root.set_current("SignUp")
+            app.change_statusbar()
+        OnBoarding1:
+            id: on_boarding_1 
+        OnBoarding2:
+            id: on_boarding_2
+        OnBoarding3:
+            id: on_boarding_3

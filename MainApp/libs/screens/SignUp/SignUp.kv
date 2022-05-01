@@ -1,0 +1,35 @@
+<SignUp@MDScreen>
+    name: "SignUp"
+    md_bg_color:BG_COLOR_LIGHT
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint_y: .35
+        pos_hint:{"center_y":.6}
+        spacing: dp(30)
+        Image:
+            id: logo
+            source: "assets/blood-donation-small.png"
+            size_hint_y: None
+            height:"80dp"
+            pos_hint:{"center_x":.5,"center_y":.1}
+            
+        HeadingLabel:
+            text:"Sign Up with Google"
+            
+        RoundButton:
+            id: google_button
+            gradient_light: LIGHT_ACCENT_COLOR
+            text:"Google"
+            text_color: DARK_TEXT_COLOR
+            font_size: sp(25)
+            pos_hint:{"center_x":.5}
+            size_hint_x:.9
+            on_release:
+                app.login()
+
+    Image:
+        source:"assets/google.png"
+        size_hint_y:None
+        size_hint_x:.09
+        pos_hint:{"center_x":.25}
+        center_y: google_button.center_y

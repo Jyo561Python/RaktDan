@@ -53,6 +53,9 @@
 ## Use of CockroachDB
 - We have used CockroachDB as a primary database because it is an easy-to-use, open-source and indestructible SQL database. 
 
+<p align="center"><img src="./MainApp/assets/cockroach.jpeg"/></p>
+
+
 ## 🧠 Challenges we ran into
 
 - For this app we wanted to build it using a new technology just to stand out from the usual bias of using either Flutter or Android Native. KivyMd was the alternative which gave us not only the option to build an App but also a way to use our previously learnt language in a better way. But due to its less resources we had to strrugle to implement certain features like Google Auth, FCM notifications and Map(which we had to scrap of plan). Plus this being our first App hackathon we had to pace ourselves Up inorder to meet the submission deadline. 

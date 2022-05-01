@@ -1,24 +1,25 @@
-from pymongo import MongoClient
-from decouple import config
+import psycopg2
+import os
 
-Mongo_Uri = config('Mongo_URL')
-mycli = MongoClient(Mongo_Uri)
-mydb = mycli["Vampires"]
-mycol = mydb["Users"]
+conn = psycopg2.connect(os.environ['DATABASE_URL'])
+cur = conn.cursor()
 
 class user:
-    def check(userid):        
-        if mycol.count_documents({"userid":userid}) == 0:
+    def check(userid):
+        cur.execute("SELECT * FROM accounts WHERE id = %s", (userid))       
+        if cur.fetchone() is not None:
             return False
         else:
             return True
             
     def signup(name, email, gender, dob, b_group, aadhar, userid):
         try:
-            mycol.insert_one({"_id":userid, "name": name, "email": email, "gender":gender, "dob":dob, "b_group": b_group, "aadhar":aadhar})
+            cur.execute(f'INSERT INTO accounts  (id, name, email, gender, dob, b_group, aadhar) VALUES ({userid}, "{name}", "{email}", "{gender}",  "{gender}", "{dob}", {b_group}, {aadhar})')
+            conn.commit()
             return 201
         except:
             return 400
     
     def signin(userid):
-        return mycol.find_one({'userid':userid})
+        cur.execute('SELECT * FROM accounts WHERE id = "id"')
+        return cur.fetchone()

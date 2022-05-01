@@ -7,7 +7,11 @@ app = FastAPI()
 
 @app.get("/")
 async def root():
-    return {"message": "Hello",}
+    return {"message": "Hello"}
+
+@app.get("/user/check")
+async def check(email: str):
+    return functions.user.check(email)
 
 @app.post("/user/signup")
 async def user_sign(user: UserSchema = Body(default = None)):
@@ -16,3 +20,7 @@ async def user_sign(user: UserSchema = Body(default = None)):
         return JSONResponse(status_code=status.HTTP_201_CREATED, content={"message": "Registered"})
     elif stat == 400:
         return JSONResponse(status_code=400, detail="Already Exists")
+
+@app.get("/user/signin")
+async def user_signin(userid: str):
+    return functions.user.signin(userid)

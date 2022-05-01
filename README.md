@@ -83,7 +83,7 @@
 <h2 align="center"><b>Contributors 🫂</b></h2>
 
 <p align="center">
-<table center>
+<table align-self="center">
 
  <tr>
     <td align="center">

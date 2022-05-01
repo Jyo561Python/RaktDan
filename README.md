@@ -10,13 +10,13 @@
 	
 ## App Visuals
 
-   <p align="center"><img src="./MainApp/assets/20220501_141006.gif" height="300px" width="150px" /></p>
+   <p align="center"><img src="./MainApp/assets/20220501_141006.gif" height="400px" width="200px" /></p>
 	
-   <p align="center"><img src="./MainApp/assets/20220501_141128.gif" height="300px" width="150px" /></p>
+   <p align="center"><img src="./MainApp/assets/20220501_141128.gif" height="400px" width="200px" /></p>
 	
-   <p align="center"><img src="./MainApp/assets/20220501_141217.gif" height="300px" width="150px" /></p>
+   <p align="center"><img src="./MainApp/assets/20220501_141217.gif" height="400px" width="200px" /></p>
 	
-   <p align="center"><img src="./MainApp/assets/20220501_141302.gif" height="300px" width="150px" /></p>
+   <p align="center"><img src="./MainApp/assets/20220501_141302.gif" height="400px" width="200px" /></p>
 	
 
 

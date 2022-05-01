@@ -19,6 +19,9 @@
    <img src="./MainApp/assets/20220501_141302.gif" height="300px" width="150px" />
 	
 
+
+
+
 ## 💻 What it does
  - Users can use the apps Update feature to stay updated about requirements of blood donation Area
  - Users can also make use of the  Nearby Hospitals feature to look for closest hospitals near them whenever an medical emergency arises
@@ -60,7 +63,9 @@
 
 ## 🚀 What's next for RaktDan
 
-   A Partner App where users can  
+  - A Partner App where hospitals can request donors for blood when ever there is a shortage and the information will be shown here in RaktDan User app.
+  - Integration of other medical requirements in the app so that we can help paitients when ever they have a medical problem.
+  - A better way to send notifications and the use of an ML model to predict most and least blood availability areas.
 
 ## Real time usecases of the project
 

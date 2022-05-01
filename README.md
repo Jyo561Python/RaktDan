@@ -3,6 +3,8 @@
 # RaktDan
   An application to serve as a medium of network between blood donors and patients & hospitals. The app aims to simplify the process of blood donation by introducing a 	digital approach to the tradition model.
 
+<p align="center"><a hreaf="https://youtu.be/5-oYyPHZjAY">View The Presentation</a></p>
+
 
 ## Inspiration
 
@@ -46,7 +48,10 @@
 
 
 ## Use of Google Cloud
-   We used Google Cloud for authentication of our users and also for sending Notifications to our app using <b>Cloud functions</b>. 
+- We used Google Cloud for authentication of our users and also for sending Notifications to our app using <b>Cloud functions</b>. 
+
+## Use of CockroachDB
+- We have used CockroachDB as a primary database because it is an easy-to-use, open-source and indestructible SQL database. 
 
 ## 🧠 Challenges we ran into
 
